@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            color: #000000; /* White color for text */
+            background-image: url('countdownbg.png'); /* Replace with the image you uploaded */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 8em;
+            font-weight: bold;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .countdown div {
+            margin: 0 10px;
+        }
+
+        .labels {
+            display: flex;
+            justify-content: center;
+            font-size: 2.2em;
+            margin-top: -10px;
+            letter-spacing: 1px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .labels div {
+            margin: 0 10px;
+        }
+
+        
+
+        
+        
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .countdown {
+                font-size: 3em;
+            }
+            .labels {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 5em;
+            }
+            .countdown {
+                font-size: 3em;
+            }
+            .labels {
+                font-size: 1 em;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>OUR FEST STARTS IN</h1>
+    <div class="countdown">
+        <div id="days">154</div>:
+        <div id="hours">60</div>:
+        <div id="minutes">20</div>:
+        <div id="seconds">23</div>
+    </div>
+    <div class="labels">
+        <div>DAYS</div>
+        <div>HOURS</div>
+        <div>MINUTES</div>
+        <div>SECONDS</div>
+    </div>
+
+    
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 24, 2025 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the elements
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
