@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background-color: #2a2a3b;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('aboutbg.png');
+    background-size: cover;
+    background-position: center;
+    overflow-y: scroll;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 50px 0;  /* Add margin to make content scrollable */
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    color: #c5b358;
+}
+
+.highlight {
+    color: #c5b358;
+    font-weight: bold;
+}
+
+.welcome {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.intro, .description, .closing {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 36px;
+    }
+
+    .welcome, .intro, .description, .closing {
+        font-size: 16px;
+    }
+}
