@@ -172,7 +172,7 @@
     {
         width: 100px;
         height: 180px;
-        bottom: -300px;
+        bottom: -280px;
         top: initial;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     }
@@ -202,6 +202,18 @@
         left: 360px;
         
     }
-    .content {
+    .content 
+    {
+        font-size: small;
+    }
+    .content1 
+    {
+        font-size: 10px;
+    }
+    .buttons {
+        position: absolute;
+        bottom: 25px;
+        display: flex;
+        gap: 20px;
     }
 }
