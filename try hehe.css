@@ -164,7 +164,7 @@
 {
     .slider {
         position: absolute;
-        inset:40px 40px 280px 40px;
+        inset:40px 40px 400px 40px;
         justify-content: center;
         align-items: center;
     }
@@ -204,11 +204,17 @@
     }
     .content 
     {
-        font-size: small;
+        font-size: 4px;
+        padding: 2px;
+        position: absolute;
+        bottom: 10px;
     }
     .content1 
     {
-        font-size: 10px;
+        font-size: 7px;
+        padding: 15px;
+        max-width: 150px;
+        
     }
     .buttons {
         position: absolute;
