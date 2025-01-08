@@ -154,6 +154,21 @@
     transform: translateY(0);
     transition-delay: 0.5s;
 }
+.slider .slides:nth-child(4) .content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+.slider .slides:nth-child(5) .content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+.slider .slides:nth-child(6) .content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
 
 .slider .slides:nth-child(2) .content1 {
     opacity: 1;
@@ -165,7 +180,7 @@
 {
     .slider {
         position: absolute;
-        inset:40px 40px 400px 40px;
+        inset:50px 50px 400px 50px;
         justify-content: center;
         align-items: center;
     }
